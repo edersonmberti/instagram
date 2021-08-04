@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E4012B3626BB46B500CA55E3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4012B3526BB46B500CA55E3 /* CustomTextField.swift */; };
 		E4012B3826BB4D0700CA55E3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4012B3726BB4D0700CA55E3 /* CustomButton.swift */; };
+		E4012B3A26BB4FFC00CA55E3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4012B3926BB4FFC00CA55E3 /* AuthenticationViewModel.swift */; };
 		E44985E826B8D70100C9C844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E726B8D70100C9C844 /* AppDelegate.swift */; };
 		E44985EA26B8D70100C9C844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E926B8D70100C9C844 /* SceneDelegate.swift */; };
 		E44985F126B8D70200C9C844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44985F026B8D70200C9C844 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		E4012B3526BB46B500CA55E3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E4012B3726BB4D0700CA55E3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E4012B3926BB4FFC00CA55E3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		E44985E426B8D70100C9C844 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44985E726B8D70100C9C844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44985E926B8D70100C9C844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		E449861926B8D7BF00C9C844 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E4012B3926BB4FFC00CA55E3 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				E449862226B8D91700C9C844 /* SearchController.swift in Sources */,
 				E4012B3826BB4D0700CA55E3 /* CustomButton.swift in Sources */,
 				E449861E26B8D80200C9C844 /* MainTabController.swift in Sources */,
+				E4012B3A26BB4FFC00CA55E3 /* AuthenticationViewModel.swift in Sources */,
 				E449862626B8D92A00C9C844 /* NotificationsController.swift in Sources */,
 				E44985EA26B8D70100C9C844 /* SceneDelegate.swift in Sources */,
 				E4822C1726BA1BE0002FB2F8 /* Extensions.swift in Sources */,

@@ -11,6 +11,8 @@ class LoginController: UIViewController {
     
     // MARK: - Properties
     
+    private var viewModel = LoginViewModel()
+    
     private let iconImage: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
         imageView.contentMode = .scaleAspectFill
@@ -31,12 +33,14 @@ class LoginController: UIViewController {
     
     private let loginButton: CustomButton = {
         let button = CustomButton(placeholder: "Log In")
+        button.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
+        button.isEnabled = false
         return button
     }()
     
     private let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
-        button.attributedTitle(firstPart: "Forgot your password?", secondPart: "Get help signing in.")
+        button.attributedTitle(firstPart: "Forgot your password?", secondPart: "Get help signing in")
         return button
     }()
     
@@ -53,6 +57,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         setupLayout()
+        setupNotificationObservers()
     }
     
     // MARK: - Actions
@@ -60,6 +65,18 @@ class LoginController: UIViewController {
     @objc func handleShowSignUp() {
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+        }
+        
+        loginButton.isEnabled = viewModel.formIsValid
+        loginButton.backgroundColor =  viewModel.buttonBackgroundColor
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
     }
     
     // MARK: - Helpers
@@ -90,5 +107,10 @@ class LoginController: UIViewController {
     func setupNavigationBar() {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
+    }
+    
+    func setupNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 }
