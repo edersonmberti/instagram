@@ -11,6 +11,8 @@ class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
+    private var viewModel = RegistrationViewModel()
+    
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
@@ -36,6 +38,8 @@ class RegistrationController: UIViewController {
     
     private let signUpButton: CustomButton = {
         let button = CustomButton(placeholder: "Sing Up")
+        button.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
+        button.isEnabled = false
         return button
     }()
     
@@ -52,12 +56,28 @@ class RegistrationController: UIViewController {
         super.viewDidLoad()
         
         setupLayout()
+        setupNotificationObservers()
     }
     
     // MARK: - Actions
     
     @objc func handleShowLogin() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        switch sender {
+        case emailTextField:
+            viewModel.email = sender.text
+        case passwordTextField:
+            viewModel.password = sender.text
+        case fullnameTextField:
+            viewModel.fullname = sender.text
+        default:
+            viewModel.username = sender.text
+        }
+        
+        updateForm()
     }
     
     // MARK: - Helpers
@@ -85,5 +105,21 @@ class RegistrationController: UIViewController {
         view.addSubview(alreadyAccountButton)
         alreadyAccountButton.centerX(inView: view)
         alreadyAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+    }
+    
+    func setupNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        usernameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+}
+
+extension RegistrationController: FormViewModel {
+    
+    func updateForm() {
+        signUpButton.isEnabled = viewModel.formIsValid
+        signUpButton.backgroundColor =  viewModel.buttonBackgroundColor
+        signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
     }
 }
