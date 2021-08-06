@@ -32,6 +32,8 @@
 		E4822C1726BA1BE0002FB2F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1626BA1BE0002FB2F8 /* Extensions.swift */; };
 		E4822C1A26BA26A5002FB2F8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1926BA26A5002FB2F8 /* LoginController.swift */; };
 		E4822C1C26BA26B1002FB2F8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1B26BA26B1002FB2F8 /* RegistrationController.swift */; };
+		E4CA0AA426BDF013007A7A07 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA0AA326BDF013007A7A07 /* ProfileCell.swift */; };
+		E4CA0AA626BDF022007A7A07 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA0AA526BDF022007A7A07 /* ProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		E4822C1626BA1BE0002FB2F8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E4822C1926BA26A5002FB2F8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E4822C1B26BA26B1002FB2F8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		E4CA0AA326BDF013007A7A07 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		E4CA0AA526BDF022007A7A07 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		E756395BFEA8F165DE2D7283 /* Pods-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTests.release.xcconfig"; path = "Target Support Files/Pods-InstagramTests/Pods-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC5B6B0B7608040251EBDF03 /* Pods_InstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,6 +205,7 @@
 		E449861826B8D7B700C9C844 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4CA0AA726BDF025007A7A07 /* Profile */,
 				E4822C1126BA1ACE002FB2F8 /* FeedCell.swift */,
 				E4012B3526BB46B500CA55E3 /* CustomTextField.swift */,
 				E4012B3726BB4D0700CA55E3 /* CustomButton.swift */,
@@ -254,6 +259,15 @@
 				E4822C1B26BA26B1002FB2F8 /* RegistrationController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E4CA0AA726BDF025007A7A07 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E4CA0AA326BDF013007A7A07 /* ProfileCell.swift */,
+				E4CA0AA526BDF022007A7A07 /* ProfileHeader.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F58DA9921443F91A493342AD /* Frameworks */ = {
@@ -505,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4012B3626BB46B500CA55E3 /* CustomTextField.swift in Sources */,
+				E4CA0AA626BDF022007A7A07 /* ProfileHeader.swift in Sources */,
 				E4822C1A26BA26A5002FB2F8 /* LoginController.swift in Sources */,
 				E44985E826B8D70100C9C844 /* AppDelegate.swift in Sources */,
 				E449862226B8D91700C9C844 /* SearchController.swift in Sources */,
@@ -519,6 +534,7 @@
 				E449862826B8D93200C9C844 /* ProfileController.swift in Sources */,
 				E467BB9026BCD06D00A82800 /* ImageUploader.swift in Sources */,
 				E467BB9226BCD08000A82800 /* AuthService.swift in Sources */,
+				E4CA0AA426BDF013007A7A07 /* ProfileCell.swift in Sources */,
 				E4822C1C26BA26B1002FB2F8 /* RegistrationController.swift in Sources */,
 				E4822C1226BA1ACE002FB2F8 /* FeedCell.swift in Sources */,
 			);
