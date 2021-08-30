@@ -7,19 +7,32 @@
 
 import UIKit
 
+protocol UpdatePostControllerProtocol: AnyObject {
+    func controllerDidFinishUploadingPost(_ controller: UploadPostController)
+}
+
 class UploadPostController: UIViewController {
     
     // MARK: - Properties
     
+    weak var delegate: UpdatePostControllerProtocol?
+    
+    var selectedImage: UIImage? {
+        didSet {
+            photoImageView.image = selectedImage
+        }
+    }
+    
     private let photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
-        imageView.image = #imageLiteral(resourceName: "venom-7")
         return imageView
     }()
     
-    private let captionTextView: UITextView = {
-        let textView = UITextView()
+    private lazy var captionTextView: InputTextView = {
+        let textView = InputTextView()
+        textView.placeholderText = "Enter caption..."
+        textView.delegate = self
         return textView
     }()
     
@@ -46,10 +59,27 @@ class UploadPostController: UIViewController {
     }
     
     @objc func didTapDone() {
-        print("DEBUG: Share post here..")
+        guard let image = selectedImage else { return }
+        guard let caption = captionTextView.text else { return }
+        
+        PostService.uploadPost(caption: caption, image: image) { error in
+            if let error = error {
+                print("DEBUG: Error to upload post \(error.localizedDescription)")
+                return
+            }
+            
+            self.delegate?.controllerDidFinishUploadingPost(self)
+        }
+        
     }
     
     // MARK: - Helpers
+    
+    func checkMaxLength(_ textView: UITextView) {
+        if (textView.text.count) > 100 {
+            textView.deleteBackward()
+        }
+    }
     
     func setupLayout() {
         view.backgroundColor = .white
@@ -68,6 +98,17 @@ class UploadPostController: UIViewController {
         captionTextView.anchor(top: photoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 16, paddingLeft: 12, paddingRight: 12, height: 64)
         
         view.addSubview(characterCountLabel)
-        characterCountLabel.anchor(bottom: captionTextView.bottomAnchor, right: view.rightAnchor, paddingRight: 12)
+        characterCountLabel.anchor(bottom: captionTextView.bottomAnchor, right: view.rightAnchor, paddingBottom: -8, paddingRight: 12)
+    }
+}
+
+// MARK: - UITextFieldDeletage
+
+extension UploadPostController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        checkMaxLength(textView)
+        let count = textView.text.count
+        characterCountLabel.text = "'\(count)/100"
     }
 }

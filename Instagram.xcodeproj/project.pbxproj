@@ -16,6 +16,7 @@
 		E4012B3C26BB790500CA55E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4012B3B26BB790500CA55E3 /* GoogleService-Info.plist */; };
 		E402510C26DA8BBC00FB2C09 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E402510B26DA8BBC00FB2C09 /* UploadPostController.swift */; };
 		E402510E26DA90F000FB2C09 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E402510D26DA90F000FB2C09 /* InputTextView.swift */; };
+		E402511026DB3CA400FB2C09 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E402510F26DB3CA400FB2C09 /* PostService.swift */; };
 		E44985E826B8D70100C9C844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E726B8D70100C9C844 /* AppDelegate.swift */; };
 		E44985EA26B8D70100C9C844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E926B8D70100C9C844 /* SceneDelegate.swift */; };
 		E44985F126B8D70200C9C844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44985F026B8D70200C9C844 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		E4012B3B26BB790500CA55E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E402510B26DA8BBC00FB2C09 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		E402510D26DA90F000FB2C09 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		E402510F26DB3CA400FB2C09 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		E44985E426B8D70100C9C844 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44985E726B8D70100C9C844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44985E926B8D70100C9C844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				E467BB8F26BCD06D00A82800 /* ImageUploader.swift */,
 				E467BB9126BCD08000A82800 /* AuthService.swift */,
 				E4CF3D7326BEE72B0015AEA5 /* UserService.swift */,
+				E402510F26DB3CA400FB2C09 /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				E449862826B8D93200C9C844 /* ProfileController.swift in Sources */,
 				E467BB9026BCD06D00A82800 /* ImageUploader.swift in Sources */,
 				E467BB9226BCD08000A82800 /* AuthService.swift in Sources */,
+				E402511026DB3CA400FB2C09 /* PostService.swift in Sources */,
 				E4CF3D7426BEE72B0015AEA5 /* UserService.swift in Sources */,
 				E4CA0AA426BDF013007A7A07 /* ProfileCell.swift in Sources */,
 				E4822C1C26BA26B1002FB2F8 /* RegistrationController.swift in Sources */,
