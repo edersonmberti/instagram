@@ -12,12 +12,17 @@ private let reuseIdentifier = "Cell"
 
 class FeedController: UICollectionViewController {
     
+    // MARK: - Properties
+    
+    private var posts = [Post]()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
+        fetchPosts()
     }
     
     // MARK: - Helpers
@@ -44,6 +49,15 @@ class FeedController: UICollectionViewController {
             print("DEBUG: Failed to sign out")
         }
     }
+    
+    // MARK: - API
+    
+    func fetchPosts() {
+        PostService.fetchPosts { posts in
+            self.posts = posts
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 // MARK : - UICollectionViewDataSource
@@ -51,12 +65,12 @@ class FeedController: UICollectionViewController {
 extension FeedController  {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-        
+        cell.viewModel = PostViewModel(post: posts[indexPath.row])
         return cell
     }
 }

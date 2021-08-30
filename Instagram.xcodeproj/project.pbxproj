@@ -17,6 +17,8 @@
 		E402510C26DA8BBC00FB2C09 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E402510B26DA8BBC00FB2C09 /* UploadPostController.swift */; };
 		E402510E26DA90F000FB2C09 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E402510D26DA90F000FB2C09 /* InputTextView.swift */; };
 		E402511026DB3CA400FB2C09 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E402510F26DB3CA400FB2C09 /* PostService.swift */; };
+		E4043F3626DDA1800088A15B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4043F3526DDA1800088A15B /* Post.swift */; };
+		E4043F3826DDA5140088A15B /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4043F3726DDA5140088A15B /* PostViewModel.swift */; };
 		E44985E826B8D70100C9C844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E726B8D70100C9C844 /* AppDelegate.swift */; };
 		E44985EA26B8D70100C9C844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E926B8D70100C9C844 /* SceneDelegate.swift */; };
 		E44985F126B8D70200C9C844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44985F026B8D70200C9C844 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		E402510B26DA8BBC00FB2C09 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		E402510D26DA90F000FB2C09 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		E402510F26DB3CA400FB2C09 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		E4043F3526DDA1800088A15B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E4043F3726DDA5140088A15B /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		E44985E426B8D70100C9C844 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44985E726B8D70100C9C844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44985E926B8D70100C9C844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				E4CF3D7726BEE95B0015AEA5 /* User.swift */,
+				E4043F3526DDA1800088A15B /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				E4012B3926BB4FFC00CA55E3 /* AuthenticationViewModel.swift */,
 				E4CF3D7926BEEC710015AEA5 /* ProfileHeaderViewModel.swift */,
 				E4B4DE0426D30DC000C293DB /* UserCellViewModel.swift */,
+				E4043F3726DDA5140088A15B /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4043F3826DDA5140088A15B /* PostViewModel.swift in Sources */,
 				E4012B3626BB46B500CA55E3 /* CustomTextField.swift in Sources */,
 				E4CA0AA626BDF022007A7A07 /* ProfileHeader.swift in Sources */,
 				E402510C26DA8BBC00FB2C09 /* UploadPostController.swift in Sources */,
@@ -567,6 +574,7 @@
 				E449862026B8D90D00C9C844 /* FeedController.swift in Sources */,
 				E449862826B8D93200C9C844 /* ProfileController.swift in Sources */,
 				E467BB9026BCD06D00A82800 /* ImageUploader.swift in Sources */,
+				E4043F3626DDA1800088A15B /* Post.swift in Sources */,
 				E467BB9226BCD08000A82800 /* AuthService.swift in Sources */,
 				E402511026DB3CA400FB2C09 /* PostService.swift in Sources */,
 				E4CF3D7426BEE72B0015AEA5 /* UserService.swift in Sources */,
