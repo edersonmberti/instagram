@@ -151,5 +151,10 @@ extension MainTabController: UpdatePostControllerProtocol {
     func controllerDidFinishUploadingPost(_ controller: UploadPostController) {
         selectedIndex = 0
         self.dismiss(animated: true, completion: nil)
+        
+        guard let feedNav = viewControllers?.first as? UINavigationController else { return }
+        guard let feed = feedNav.viewControllers.first as? FeedController else { return }
+        
+        feed.handleRefresh()
     }
 }
