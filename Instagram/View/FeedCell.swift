@@ -20,14 +20,13 @@ class FeedCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
-        imageView.image = #imageLiteral(resourceName: "venom-7")
+        imageView.backgroundColor = .lightGray
         return imageView
     }()
     
     private lazy var usernameButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.black, for: .normal)
-        button.setTitle("venom", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
         button.addTarget(self, action: #selector(didTapUsername), for: .touchUpInside)
         return button
@@ -38,7 +37,6 @@ class FeedCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
-        imageView.image = #imageLiteral(resourceName: "venom-7")
         return imageView
     }()
     
@@ -65,7 +63,6 @@ class FeedCell: UICollectionViewCell {
     
     private let likesLabel: UILabel = {
         let label = UILabel()
-        label.text = "1 like"
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
@@ -130,9 +127,12 @@ class FeedCell: UICollectionViewCell {
     func configure() {
         guard let viewModel = viewModel else { return }
         
-        likesLabel.text = "\(viewModel.likes) \(viewModel.likes > 1 ? "likes" : "like")"
+        likesLabel.text = "\(viewModel.likes) \(viewModel.likes != 1 ? "likes" : "like")"
         captionLabel.text = viewModel.caption
         postImageView.sd_setImage(with: viewModel.imageUrl)
+        
+        usernameButton.setTitle(viewModel.username, for: .normal)
+        profileImageView.sd_setImage(with: viewModel.userProfileImageUrl)
     }
     
     func configureActionsButtons() {

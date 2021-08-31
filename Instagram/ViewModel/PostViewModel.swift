@@ -12,6 +12,10 @@ struct PostViewModel {
     
     var imageUrl: URL? { URL(string: post.imageUrl) }
     
+    var userProfileImageUrl: URL? { URL(string: post.ownerImageUrl) }
+    
+    var username: String { post.ownerUsername }
+    
     var caption: String { return post.caption }
     
     var likes: Int { post.likes }

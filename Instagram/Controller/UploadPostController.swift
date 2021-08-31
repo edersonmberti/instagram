@@ -23,6 +23,8 @@ class UploadPostController: UIViewController {
         }
     }
     
+    var currentUser: User?
+    
     private let photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -61,10 +63,11 @@ class UploadPostController: UIViewController {
     @objc func didTapDone() {
         guard let image = selectedImage else { return }
         guard let caption = captionTextView.text else { return }
+        guard let currentUser = currentUser else { return }
         
         showLoader(true)
         
-        PostService.uploadPost(caption: caption, image: image) { error in
+        PostService.uploadPost(caption: caption, image: image, user: currentUser) { error in
             self.showLoader(false)
             if let error = error {
                 print("DEBUG: Error to upload post \(error.localizedDescription)")
@@ -73,7 +76,6 @@ class UploadPostController: UIViewController {
             
             self.delegate?.controllerDidFinishUploadingPost(self)
         }
-        
     }
     
     // MARK: - Helpers
@@ -112,6 +114,6 @@ extension UploadPostController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         checkMaxLength(textView)
         let count = textView.text.count
-        characterCountLabel.text = "'\(count)/100"
+        characterCountLabel.text = "\(count)/100"
     }
 }
