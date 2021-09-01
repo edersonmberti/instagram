@@ -35,6 +35,7 @@ class UploadPostController: UIViewController {
         let textView = InputTextView()
         textView.placeholderText = "Enter caption..."
         textView.delegate = self
+        textView.placeholderShouldCenter = false
         return textView
     }()
     

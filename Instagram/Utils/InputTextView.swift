@@ -23,6 +23,17 @@ class InputTextView: UITextView {
         return label
     }()
     
+    var placeholderShouldCenter = true {
+        didSet {
+            if placeholderShouldCenter {
+                placehoderLabel.anchor(left: leftAnchor, right: rightAnchor, paddingLeft: 8)
+                placehoderLabel.center(inView: self)
+            } else {
+                placehoderLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 4, paddingLeft: 8)
+            }
+        }
+    }
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
