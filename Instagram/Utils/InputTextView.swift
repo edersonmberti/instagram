@@ -17,7 +17,7 @@ class InputTextView: UITextView {
         }
     }
     
-    private let placehoderLabel: UILabel = {
+    let placehoderLabel: UILabel = {
        let label = UILabel()
         label.textColor = .lightGray
         return label
