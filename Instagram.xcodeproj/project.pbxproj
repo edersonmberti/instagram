@@ -23,6 +23,8 @@
 		E40FD20A26DEFC5800B2E8C6 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40FD20926DEFC5800B2E8C6 /* CommentCell.swift */; };
 		E40FD20C26DF054000B2E8C6 /* CommentInputAcessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40FD20B26DF054000B2E8C6 /* CommentInputAcessoryView.swift */; };
 		E40FD20E26DF10AB00B2E8C6 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40FD20D26DF10AB00B2E8C6 /* CommentService.swift */; };
+		E40FD21026DF13CB00B2E8C6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40FD20F26DF13CB00B2E8C6 /* Comment.swift */; };
+		E40FD21226DF193D00B2E8C6 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40FD21126DF193D00B2E8C6 /* CommentViewModel.swift */; };
 		E44985E826B8D70100C9C844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E726B8D70100C9C844 /* AppDelegate.swift */; };
 		E44985EA26B8D70100C9C844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44985E926B8D70100C9C844 /* SceneDelegate.swift */; };
 		E44985F126B8D70200C9C844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44985F026B8D70200C9C844 /* Assets.xcassets */; };
@@ -89,6 +91,8 @@
 		E40FD20926DEFC5800B2E8C6 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		E40FD20B26DF054000B2E8C6 /* CommentInputAcessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAcessoryView.swift; sourceTree = "<group>"; };
 		E40FD20D26DF10AB00B2E8C6 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		E40FD20F26DF13CB00B2E8C6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		E40FD21126DF193D00B2E8C6 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		E44985E426B8D70100C9C844 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44985E726B8D70100C9C844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44985E926B8D70100C9C844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 			children = (
 				E4CF3D7726BEE95B0015AEA5 /* User.swift */,
 				E4043F3526DDA1800088A15B /* Post.swift */,
+				E40FD20F26DF13CB00B2E8C6 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				E4CF3D7926BEEC710015AEA5 /* ProfileHeaderViewModel.swift */,
 				E4B4DE0426D30DC000C293DB /* UserCellViewModel.swift */,
 				E4043F3726DDA5140088A15B /* PostViewModel.swift */,
+				E40FD21126DF193D00B2E8C6 /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40FD21226DF193D00B2E8C6 /* CommentViewModel.swift in Sources */,
 				E4043F3826DDA5140088A15B /* PostViewModel.swift in Sources */,
 				E4012B3626BB46B500CA55E3 /* CustomTextField.swift in Sources */,
 				E4CA0AA626BDF022007A7A07 /* ProfileHeader.swift in Sources */,
@@ -573,6 +580,7 @@
 				E449862226B8D91700C9C844 /* SearchController.swift in Sources */,
 				E4012B3826BB4D0700CA55E3 /* CustomButton.swift in Sources */,
 				E40FD20E26DF10AB00B2E8C6 /* CommentService.swift in Sources */,
+				E40FD21026DF13CB00B2E8C6 /* Comment.swift in Sources */,
 				E449861E26B8D80200C9C844 /* MainTabController.swift in Sources */,
 				E4012B3A26BB4FFC00CA55E3 /* AuthenticationViewModel.swift in Sources */,
 				E49EE0FD26D2AF2A00814557 /* UserCell.swift in Sources */,
