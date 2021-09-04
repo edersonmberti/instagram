@@ -47,7 +47,7 @@ class FeedCell: UICollectionViewCell {
         return imageView
     }()
     
-    private let likeButton: UIButton = {
+    var likeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
         button.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
