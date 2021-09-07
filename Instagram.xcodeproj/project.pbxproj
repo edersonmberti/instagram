@@ -44,6 +44,7 @@
 		E4822C1726BA1BE0002FB2F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1626BA1BE0002FB2F8 /* Extensions.swift */; };
 		E4822C1A26BA26A5002FB2F8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1926BA26A5002FB2F8 /* LoginController.swift */; };
 		E4822C1C26BA26B1002FB2F8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1B26BA26B1002FB2F8 /* RegistrationController.swift */; };
+		E48F08AB26E7EBA00064140A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F08AA26E7EBA00064140A /* Notification.swift */; };
 		E49EE0FD26D2AF2A00814557 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE0FC26D2AF2A00814557 /* UserCell.swift */; };
 		E4B4DE0526D30DC000C293DB /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4DE0426D30DC000C293DB /* UserCellViewModel.swift */; };
 		E4CA0AA426BDF013007A7A07 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA0AA326BDF013007A7A07 /* ProfileCell.swift */; };
@@ -119,6 +120,7 @@
 		E4822C1626BA1BE0002FB2F8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E4822C1926BA26A5002FB2F8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E4822C1B26BA26B1002FB2F8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		E48F08AA26E7EBA00064140A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		E49EE0FC26D2AF2A00814557 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		E4B4DE0426D30DC000C293DB /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		E4CA0AA326BDF013007A7A07 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				E4CF3D7726BEE95B0015AEA5 /* User.swift */,
 				E4043F3526DDA1800088A15B /* Post.swift */,
 				E40FD20F26DF13CB00B2E8C6 /* Comment.swift */,
+				E48F08AA26E7EBA00064140A /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				E4012B3826BB4D0700CA55E3 /* CustomButton.swift in Sources */,
 				E40FD20E26DF10AB00B2E8C6 /* CommentService.swift in Sources */,
 				E40FD21026DF13CB00B2E8C6 /* Comment.swift in Sources */,
+				E48F08AB26E7EBA00064140A /* Notification.swift in Sources */,
 				E449861E26B8D80200C9C844 /* MainTabController.swift in Sources */,
 				E4012B3A26BB4FFC00CA55E3 /* AuthenticationViewModel.swift in Sources */,
 				E49EE0FD26D2AF2A00814557 /* UserCell.swift in Sources */,
