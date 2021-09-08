@@ -45,6 +45,7 @@
 		E4822C1A26BA26A5002FB2F8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1926BA26A5002FB2F8 /* LoginController.swift */; };
 		E4822C1C26BA26B1002FB2F8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4822C1B26BA26B1002FB2F8 /* RegistrationController.swift */; };
 		E48F08AB26E7EBA00064140A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F08AA26E7EBA00064140A /* Notification.swift */; };
+		E48F08AD26E7EEBA0064140A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F08AC26E7EEBA0064140A /* NotificationService.swift */; };
 		E49EE0FD26D2AF2A00814557 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE0FC26D2AF2A00814557 /* UserCell.swift */; };
 		E4B4DE0526D30DC000C293DB /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4DE0426D30DC000C293DB /* UserCellViewModel.swift */; };
 		E4CA0AA426BDF013007A7A07 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA0AA326BDF013007A7A07 /* ProfileCell.swift */; };
@@ -121,6 +122,7 @@
 		E4822C1926BA26A5002FB2F8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E4822C1B26BA26B1002FB2F8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		E48F08AA26E7EBA00064140A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E48F08AC26E7EEBA0064140A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		E49EE0FC26D2AF2A00814557 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		E4B4DE0426D30DC000C293DB /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		E4CA0AA326BDF013007A7A07 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				E4CF3D7326BEE72B0015AEA5 /* UserService.swift */,
 				E402510F26DB3CA400FB2C09 /* PostService.swift */,
 				E40FD20D26DF10AB00B2E8C6 /* CommentService.swift */,
+				E48F08AC26E7EEBA0064140A /* NotificationService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				E4B4DE0526D30DC000C293DB /* UserCellViewModel.swift in Sources */,
 				E449862026B8D90D00C9C844 /* FeedController.swift in Sources */,
 				E449862826B8D93200C9C844 /* ProfileController.swift in Sources */,
+				E48F08AD26E7EEBA0064140A /* NotificationService.swift in Sources */,
 				E467BB9026BCD06D00A82800 /* ImageUploader.swift in Sources */,
 				E4043F3626DDA1800088A15B /* Post.swift in Sources */,
 				E467BB9226BCD08000A82800 /* AuthService.swift in Sources */,
