@@ -11,12 +11,15 @@ class NotificationCell: UITableViewCell {
     
     // MARK: - Properties
     
+    var viewModel: NotificationViewModel? {
+        didSet { configure() }
+    }
+    
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = .lightGray
-        imageView.image = #imageLiteral(resourceName: "venom-7")
         return imageView
     }()
     
@@ -82,6 +85,14 @@ class NotificationCell: UITableViewCell {
     }
     
     // MARK: - Helpers
+    
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        postImageView.sd_setImage(with: viewModel.postImageUrl)
+        infoLabel.attributedText = viewModel.notificationMessage
+    }
     
     // MARK: - Actions
     

@@ -146,7 +146,10 @@ extension FeedController: FeedCellDelegate {
                 cell.likeButton.tintColor = .red
                 cell.viewModel?.post.likes = post.likes + 1
                 
-                NotificationService.uploadNotification(toUid: post.ownerUid, type: .like, post: post)
+                guard let tab = self.tabBarController as? MainTabController else { return }
+                guard let user = tab.user else { return }
+                
+                NotificationService.uploadNotification(toUid: post.ownerUid, fromUser: user, type: .like, post: post)
             }
         }
     }
