@@ -15,7 +15,7 @@ class ProfileController: UICollectionViewController {
     // MARK: - Properties
     
     private var posts = [Post]()
-
+    
     private var user: User
     
     // MARK: - Lifecycle
@@ -111,7 +111,7 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         1
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         1
     }
@@ -131,6 +131,9 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 
 extension ProfileController: ProfileHeaderDelegate {
     func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
+        guard let tab = self.tabBarController as? MainTabController else { return }
+        guard let currentUser = tab.user else { return }
+        
         if user.isCurrentUser {
             print("DEBUG: Show edit profile")
         } else if user.isFollowed {
@@ -142,6 +145,10 @@ extension ProfileController: ProfileHeaderDelegate {
             UserService.follow(uid: user.uid) { error in
                 self.user.isFollowed = true
                 self.collectionView.reloadData()
+                
+                NotificationService.uploadNotification(toUid: user.uid,
+                                                       fromUser: currentUser,
+                                                       type: .follow)
             }
         }
     }

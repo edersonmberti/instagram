@@ -27,4 +27,8 @@ struct NotificationViewModel {
         
         return attributedText
     }
+    
+    var shouldHidePostImage: Bool { self.notification.type == .follow }
+    
+    var shouldHideFollowButton: Bool { self.notification.type != .follow }
 }

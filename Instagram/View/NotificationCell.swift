@@ -26,6 +26,7 @@ class NotificationCell: UITableViewCell {
     private let infoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.numberOfLines = 2
         return label
     }()
     
@@ -69,15 +70,15 @@ class NotificationCell: UITableViewCell {
         addSubview(infoLabel)
         infoLabel.centerY(inView: profileImageView, leftAnchor: profileImageView.leftAnchor, paddingLeft: 8)
         
-        addSubview(followButton)
-        followButton.centerY(inView: self)
-        followButton.anchor(right: rightAnchor, paddingRight: 12, width: 100, height: 32)
-        
         addSubview(postImageView)
         postImageView.centerY(inView: self)
         postImageView.anchor(right: rightAnchor, paddingRight: 12, width: 40, height: 40)
+
+        addSubview(followButton)
+        followButton.centerY(inView: self)
+        followButton.anchor(right: rightAnchor, paddingRight: 12, width: 88, height: 32)
         
-        followButton.isHidden = true
+        infoLabel.anchor(right: followButton.leftAnchor, paddingRight: 4)
     }
     
     required init?(coder: NSCoder) {
@@ -92,6 +93,9 @@ class NotificationCell: UITableViewCell {
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
         postImageView.sd_setImage(with: viewModel.postImageUrl)
         infoLabel.attributedText = viewModel.notificationMessage
+        
+        followButton.isHidden = viewModel.shouldHideFollowButton
+        postImageView.isHidden = viewModel.shouldHidePostImage
     }
     
     // MARK: - Actions
