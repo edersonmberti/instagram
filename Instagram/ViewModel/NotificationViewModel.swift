@@ -8,7 +8,7 @@
 import UIKit
 
 struct NotificationViewModel {
-    private let notification: Notification
+    var notification: Notification
     
     init(notification: Notification) {
         self.notification = notification
@@ -31,4 +31,10 @@ struct NotificationViewModel {
     var shouldHidePostImage: Bool { self.notification.type == .follow }
     
     var shouldHideFollowButton: Bool { self.notification.type != .follow }
+    
+    var followButtonText: String { notification.userIsFollowed ? "Following" : "Follow" }
+    
+    var followButtonBackgroundColor: UIColor { notification.userIsFollowed ? .white : .systemBlue }
+    
+    var followButtonTextColor: UIColor { notification.userIsFollowed ? .black : .white }
 }
